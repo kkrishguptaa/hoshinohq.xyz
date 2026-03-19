@@ -7,7 +7,7 @@ export type CTAConfig = {
 import anayImage from "../../image/anay.jfif";
 import anshImage from "../../image/ansh.jpeg";
 import aryanImage from "../../image/aryan.jfif";
-import krishImage from "../../image/krish.png";
+import krishImage from "../../image/krish.jpeg";
 
 export type MetaPill = {
   label: string;
