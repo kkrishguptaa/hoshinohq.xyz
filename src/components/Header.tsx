@@ -1,5 +1,6 @@
 import type { CTAConfig, NavigationItem } from "../content/site";
 import { primaryButtonClass } from "../lib/ui";
+import logo from "../../image/logo.png";
 
 type HeaderProps = {
 	wordmark: string;
@@ -9,9 +10,16 @@ type HeaderProps = {
 
 export function Header({ wordmark, nav, primaryCta }: HeaderProps) {
 	return (
-		<header className="sticky top-4 z-50 mb-6 flex items-center justify-between gap-4 rounded-full border border-white/10 bg-[#06101c]/75 px-4 py-3 shadow-[0_28px_80px_rgba(3,8,16,0.46)] backdrop-blur-2xl sm:px-5">
+		<header className="sticky top-4 z-50 mb-6 flex items-center justify-between gap-4 rounded-full border border-white/10 bg-[#06101c]/75 px-4 py-3 shadow-[0_28px_80px_rgba(3,8,16,0.46)] backdrop-blur-2xl sm:px-5 relative overflow-visible">
+			<div className="header-mascot-wrap pointer-events-none" aria-hidden="true">
+				<img
+					src={logo}
+					alt=""
+					className="logo-float object-contain drop-shadow-[0_14px_26px_rgba(6,16,28,0.55)]"
+				/>
+			</div>
 			<a
-				className="inline-flex items-center gap-2.5 text-sm font-bold uppercase tracking-[0.12em] text-white"
+				className="brand-offset inline-flex items-center gap-2.5 text-sm font-bold uppercase tracking-[0.12em] text-white"
 				href="#top"
 				aria-label="Hoshino home"
 			>

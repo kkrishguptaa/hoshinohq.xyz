@@ -4,6 +4,11 @@ export type CTAConfig = {
   kind: "primary" | "secondary";
 };
 
+import anayImage from "../../image/anay.jfif";
+import anshImage from "../../image/ansh.jpeg";
+import aryanImage from "../../image/aryan.jfif";
+import krishImage from "../../image/krish.png";
+
 export type MetaPill = {
   label: string;
 };
@@ -199,12 +204,14 @@ export const siteContent: SiteContent = {
       name: "Krish Gupta",
       role: "Co-Founder",
       bio: "Krish shapes the vision, pacing, and builder experience behind Hoshino so the event feels ambitious from the first scroll to the final demo.",
+      imageSrc: krishImage,
       featured: true,
     },
     {
       name: "Aryan Brite",
       role: "Co-Founder",
       bio: "Aryan works on the strategy and execution details that turn Hoshino from an idea into a room full of teenage builders shipping together.",
+      imageSrc: aryanImage,
       featured: true,
     },
     {
@@ -216,11 +223,13 @@ export const siteContent: SiteContent = {
       name: "Anay Jain",
       role: "Creative Team",
       bio: "Anay contributes to the creative direction and the design choices that give Hoshino its editorial personality.",
+      imageSrc: anayImage,
     },
     {
       name: "Ansh",
       role: "Creative Team",
       bio: "Ansh supports the creative team with concepts and details that make the event feel cohesive and memorable.",
+      imageSrc: anshImage,
     },
   ],
 };
