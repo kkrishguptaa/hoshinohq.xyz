@@ -4,3 +4,41 @@
 	--font-sans: "Space Grotesk", sans-serif;
 	--font-display: "Cormorant Garamond", serif;
 }
+
+:root {
+	--mascot-size: clamp(4.5rem, 8.5vw, 7rem);
+	--mascot-overhang: clamp(0.78rem, 2vw, 1.7rem);
+	--mascot-gap: clamp(-0.06rem, 0.25vw, 0.22rem);
+}
+
+.header-mascot-wrap {
+	left: calc(var(--mascot-overhang) * -1);
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 3;
+}
+
+.brand-offset {
+	margin-left: calc(var(--mascot-size) - var(--mascot-overhang) + var(--mascot-gap));
+}
+
+@keyframes logoFloat {
+	0% {
+		transform: translate3d(0, 0, 0) rotate(-2deg);
+	}
+	50% {
+		transform: translate3d(0, -11px, 0) rotate(2deg);
+	}
+	100% {
+		transform: translate3d(0, 0, 0) rotate(-2deg);
+	}
+}
+
+.logo-float {
+	height: var(--mascot-size);
+	width: var(--mascot-size);
+	animation: logoFloat 5.2s ease-in-out infinite;
+	transform-origin: center;
+	will-change: transform;
+}
