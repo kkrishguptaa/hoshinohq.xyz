@@ -8,6 +8,14 @@ type HeaderProps = {
 	primaryCta: CTAConfig;
 };
 
+/**
+ * Render the sticky page header containing a decorative mascot, brand link, navigation menu, and primary call-to-action.
+ *
+ * @param wordmark - Text displayed in the brand link
+ * @param nav - Array of navigation items; each item should provide `href` and `label`
+ * @param primaryCta - Primary call-to-action config containing `href` and `label`
+ * @returns The header JSX element with the mascot, brand link to `#top`, primary navigation (visible on large screens), and a primary CTA button
+ */
 export function Header({ wordmark, nav, primaryCta }: HeaderProps) {
 	return (
 		<header className="sticky top-4 z-50 mb-6 flex items-center justify-between gap-4 rounded-full border border-white/10 bg-[#06101c]/75 px-4 py-3 shadow-[0_28px_80px_rgba(3,8,16,0.46)] backdrop-blur-2xl sm:px-5 relative overflow-visible">
